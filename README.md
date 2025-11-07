@@ -1,6 +1,6 @@
 # desafio-IC-BlockchainAttestation
 
-##   Desafio de Simulação IoT e Criptografia (CS&I Lab)
+## Desafio de Simulação IoT e Criptografia (CS&I Lab)
 
 Este projeto simula a lógica de coleta e envio de dados criptografados de um sensor (cliente) para uma API de servidor (receptor), atendendo a todos os requisitos do desafio.
 
@@ -13,14 +13,18 @@ Este projeto simula a lógica de coleta e envio de dados criptografados de um se
 | **Servidor/API** | `servidor.py` (Responsável pela rota `/api/data` e descriptografia) |
 | **Formato do Pacote** | `ID_DISPOSITIVO:TEMPERATURA` (Ex: `sensor_esp32-01:25.75`) |
 
+---
+
 ### 2. Bibliotecas Utilizadas
 
-As bibliotecas abaixo devem ser instaladas com `pip install -r requisitos.txt` (ou individualmente):
+As bibliotecas abaixo devem ser instaladas com `pip install -r requirements.txt` (ou individualmente):
 
 * **Flask:** Micro-framework usado para criar a API RESTful (o servidor).
 * **Requests:** Utilizada pelo `sensor.py` para realizar a comunicação HTTP POST para a API.
 * **Cryptography (Fernet):** Biblioteca robusta para criptografia simétrica, garantindo a confidencialidade dos dados (Item 5).
 * **Time e Random:** Usadas para simular a variação da temperatura (`random`) e o intervalo de envio de 2 segundos (`time.sleep`) (Item 2).
+
+---
 
 ### 3. Detalhes de Implementação e Requisitos
 
@@ -37,6 +41,8 @@ As bibliotecas abaixo devem ser instaladas com `pip install -r requisitos.txt` (
 #### C. Criptografia e Descriptografia (Item 5)
 * **Chave Secreta:** A constante `CHAVE` (ou `CHAVE_SECRETA`) é idêntica nos dois scripts, permitindo que o `servidor.py` descriptografe o pacote de bytes enviado pelo `sensor.py`.
 
+---
+
 ### 4. Como Rodar o Projeto
 
 É necessário rodar dois scripts Python simultaneamente em terminais separados para simular o ambiente Cliente-Servidor:
@@ -44,5 +50,12 @@ As bibliotecas abaixo devem ser instaladas com `pip install -r requisitos.txt` (
 #### A. Terminal 1: Servidor API
 O servidor deve ser iniciado primeiro para que esteja ouvindo na porta 5000.
 
+
+### 5. Acesso ao Vídeo Explicativo (Item 3.c)
+
+O vídeo de demonstração do funcionamento do código e da explicação da lógica de segurança pode ser acessado em:
+
+[Vídeo de Apresentação do Projeto](https://youtu.be/ns8PEJmUyeE?si=bl8Cql1wceqjqUop)
+
 ```bash
-python servidor.py
+python servidor.pyceqjqUop)
